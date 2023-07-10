@@ -1,0 +1,49 @@
+//SCSS allows nesting
+.searchBar {
+    padding: 0.5rem 0.5rem 1.5rem;// top left and bottom
+
+    .searchBar__form {
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid $bordercolor;
+        border-radius: 500px;
+
+        .searchBar__text {
+            flex-grow: 1; // that it fills everything up
+            border: none;
+            margin-right: 0.25rem; // that it doe not cover the search button
+            background-color: $button-color; // transparent
+            color: $font-color;
+            width: calc(100% - 52px); // button has 48 plis a little bit of margin
+            font-size: 1.25rem; 
+            padding: 0.75rem 0 0.75rem 0.75rem;
+            outline: none;
+        }
+
+        .searchBar__text::placeholder {
+            color: $fadecolor;
+        }
+
+        .searchBar__button {
+            border: none;
+
+            i {
+                font-size: 1.7rem;
+            }
+        }
+
+        .searchBar__button:hover,
+        .searchBar__button:focus {
+            border: none;
+            box-shadow: none;
+            text-shadow: 4px 2px 5px $text-shadow-color;
+        }
+    }
+        
+    .searchBar__form:focus-within,
+    .searchBar__form:hover {
+        box-shadow: 4px 2px 5px $text-shadow-color;
+    }
+
+    
+}

@@ -1,0 +1,30 @@
+//a11y stands for accessibility
+
+//takes it out of the screen, bt not of the page
+// so the screen reader still can read it
+.offscreen {
+    position: absolute;
+    left: -100000px;
+}
+
+//to get to the links with the tab, for skipping through them
+// without skipping through text or other stuff
+// makes the navigation through the page easier
+.skip-link {
+    position: absolute;
+    top: -999px;
+    left: 0;
+    background-color: $text-shadow-color;
+    padding: 14px;
+    z-index: 1;
+    color: $font-color;
+}
+
+//help to appear the skip links where we need it
+.skip-link:focus, 
+.skip-link:active {
+    top: auto;
+    left: auto;
+}
+
+

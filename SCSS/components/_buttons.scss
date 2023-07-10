@@ -1,0 +1,29 @@
+.button {
+    min-width: 48px; // its fingerprint size, always a good size to have
+    min-height: 48px;
+    color: $button-textcolor;
+    border: 2px solid $bordercolor;
+    border-radius: 80px; //makes the button round
+    outline: none; // we make sure later with pseudo selector to indicate, that
+    //the button is in focus
+    font-size: 1.25rem; // rem:Relative to font-size of the root element
+    font-weight: 900;// sometimes you have to change the font-weight in 
+    //font awesome in order to appear/dissappear
+    background-color: $button-color;
+    @include mq(768px) {
+        font-size: 1.5rem;
+        min-width: 64px;// make the buttons a bit bigger here
+        min-height: 64px;//when page is larger
+    }
+}
+
+//pseudo classes for the buttons
+.button:hover {
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    box-shadow: 4px 2px 5px $text-shadow-color;
+    border-color: $font-color;
+}

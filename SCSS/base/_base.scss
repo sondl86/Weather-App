@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $background-color;
+    background-image: url("../img/clouds.jpg");
+    background-size: cover;
+    background-blend-mode: overlay;
+    //absolute font-size
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: $font-color;
+    @include mq(768px){
+        //iPad size
+        font-size: 22px;
+    }
+}
+
+body {
+    width: 100%;
+    // at least as tall as the viewport
+    min-height: 100vH;//vH = viewport height
+    @include flexCenter;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+//container main element
+main {
+    width: 100%;
+    max-width: 700px; //close to an iPad width
+    max-height: 1050px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; // should expand
+    color: $font-color;
+    background-color: $mask-color;// just is a bi with shade in comparison to the body
+    border: 1px solid $bordercolor;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2.5px $shadowcolor;
+}
+
+img{
+    display: block;
+}
+
+hr {
+    width: 90%;
+    margin: auto;// centers it
+    border: 1px solid $bordercolor;
+}
+
+//class to not show something from the page
+.none {
+    display: none;
+}
+
+// to show something that was previously removed
+.block {
+    display: block;
+}
+
